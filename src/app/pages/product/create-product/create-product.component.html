@@ -1,0 +1,35 @@
+<form class="example-form flex flex-col mx-auto max-w-3xl my-10" 
+*ngIf="productForm"
+[formGroup]="productForm"
+(ngSubmit)="onSubmitProduct()"
+>
+    <h2 class="">Create products</h2>
+    <!--Title-->
+    <mat-form-field class="example-full-width">
+      <mat-label>Title</mat-label>
+      <input matInput placeholder="title" formControlName="title">
+    </mat-form-field>
+    <!--Price-->
+    <mat-form-field class="example-full-width">
+      <mat-label>Price</mat-label>
+      <input matInput placeholder="title" formControlName="price">
+    </mat-form-field>
+    <!--Description-->
+    <mat-form-field class="example-full-width">
+      <mat-label>Description</mat-label>
+      <input matInput placeholder="title" formControlName="description">
+    </mat-form-field>
+    <!--Image-->
+    <mat-form-field class="example-full-width">
+      <mat-label>Image</mat-label>
+      <input matInput placeholder="title" formControlName="image">
+    </mat-form-field>
+    <!--Category-->
+    <mat-form-field class="example-full-width">
+      <mat-label>Category</mat-label>
+      <input matInput placeholder="title" formControlName="category">
+    </mat-form-field>
+    <button class="my-2" type="submit" mat-flat-button color="primary">Primary</button>
+    <button (click)="onCancel()" class="my-2" type="button" mat-flat-button>Basic</button>
+</form>
+  
